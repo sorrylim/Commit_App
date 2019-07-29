@@ -106,7 +106,7 @@ class LoginActivity : AppCompatActivity() {
                     } else {
                         Log.w("MainActivity", "signInWithCredential:failure", task.exception)
                         updateUI(null)
-                        Log.d("MainActivity","Joke")
+                        Log.d("MainActivity","Git Test")
                     }
                 }
         }
