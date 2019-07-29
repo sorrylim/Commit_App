@@ -111,6 +111,7 @@ class LoginActivity : AppCompatActivity() {
                 }
         }
     }
+    asdfjlaskf
 
     private fun firebaseAuthWithGoogle(acct: GoogleSignInAccount) {
         Log.d("LoginActivity", "firebaseAuthWithGoogle:" + acct.id!!)
