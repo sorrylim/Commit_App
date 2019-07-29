@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             val fragment = HomeFragment()
             supportFragmentManager.beginTransaction()
-                .replace(R.id.main_fl, fragment, fragment.javaClass.simpleName).commit()
+                .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
         }
 
         val text:String = URLEncoder.encode(editText.text.toString(), "UTF-8")
@@ -57,8 +57,14 @@ class MainActivity : AppCompatActivity() {
             br = BufferedReader(InputStreamReader(con.getErrorStream()))
         }
 
-        var inputLine:String
+        var inputLine:String? = br.readLine()
         var response:StringBuffer = StringBuffer()
+
+        while(inputLine != null) {
+            response.append(inputLine)
+        }
+        br.close()
+
 
 
     }
@@ -68,25 +74,25 @@ class MainActivity : AppCompatActivity() {
             R.id.home -> {
                 val fragment = HomeFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_fl, fragment, fragment.javaClass.simpleName).commit()
+                    .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.map -> {
                 val fragment = MapFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_fl, fragment, fragment.javaClass.simpleName).commit()
+                    .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.favorite -> {
                 val fragment = FavoriteFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_fl, fragment, fragment.javaClass.simpleName).commit()
+                    .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.account -> {
                 val fragment = AccountFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_fl, fragment, fragment.javaClass.simpleName).commit()
+                    .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
                 return@OnNavigationItemSelectedListener true
             }
         }

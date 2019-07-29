@@ -4,19 +4,38 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.commit.ddang.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class SplashActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var loginIntent: Intent
+    private lateinit var mainIntent: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val loginIntent = Intent(this, LoginActivity::class.java)
-        val mainIntent = Intent(this, MainActivity::class.java)
+        auth = FirebaseAuth.getInstance()
 
-        startActivity(loginIntent)
-        finish()
+        loginIntent = Intent(this, LoginActivity::class.java)
+        mainIntent = Intent(this, MainActivity::class.java)
+    }
 
-        //TODO 로그인 여부에 따라 MainActivity로 이동하는 코드 작성
+    public override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        updateUI(currentUser)
+    }
+
+    private fun updateUI(user: FirebaseUser?) {
+        if (user != null) {
+            startActivity(mainIntent)
+            finish()
+        } else {
+            startActivity(loginIntent)
+            finish()
+        }
     }
 }

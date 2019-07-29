@@ -8,17 +8,14 @@
         tools:context=".Activity.MainActivity">
 
     <FrameLayout
-            android:id="@+id/main_fl"
+            android:id="@+id/main_frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/main_bnv"
             android:layout_marginBottom="-56dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginRight="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginTop="-45dp"
-            android:layout_below="@+id/editText"/>
+            />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/main_bnv"
