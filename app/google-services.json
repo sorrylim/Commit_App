@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "301084772530-1fr1fdii8anuqgcfqun0htga4me2eb1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commit.ddang",
+            "certificate_hash": "d2392b3fcb220aac7b2695795def7a0aacde836e"
+          }
+        },
+        {
           "client_id": "301084772530-1cqejt4pluie3ffm4ub1u0olpp61coet.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
