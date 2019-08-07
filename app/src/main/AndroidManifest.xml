@@ -11,28 +11,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.commit.ddang.Activity.DetailActivity">
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.SettingActivity">
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.FindPWActivity">
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.ProfileActivity">
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.EmailLoginActivity">
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.SignupActivity">
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.SplashActivity">
+        <activity android:name="com.commit.ddang.Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.LoginActivity">
-        </activity>
-        <activity android:name="com.commit.ddang.Activity.MainActivity">
         </activity>
     </application>
 
