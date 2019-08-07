@@ -19,8 +19,8 @@ class SplashActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        loginIntent = Intent(this, LoginActivity::class.java) //로그인 화면으로 이동
-        mainIntent = Intent(this, MainActivity::class.java) //메인 화면으로 이동
+        loginIntent = Intent(this, LoginActivity::class.java)
+        mainIntent = Intent(this, MainActivity::class.java)
     }
 
     public override fun onStart() {
