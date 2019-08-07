@@ -6,6 +6,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import com.commit.ddang.R
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -106,12 +112,10 @@ class LoginActivity : AppCompatActivity() {
                     } else {
                         Log.w("MainActivity", "signInWithCredential:failure", task.exception)
                         updateUI(null)
-                        Log.d("MainActivity","Git Tes")
                     }
                 }
         }
     }
-    asdfjlaskf
 
     private fun firebaseAuthWithGoogle(acct: GoogleSignInAccount) {
         Log.d("LoginActivity", "firebaseAuthWithGoogle:" + acct.id!!)
