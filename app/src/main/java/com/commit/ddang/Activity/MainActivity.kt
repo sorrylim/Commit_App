@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             val fragment = HomeFragment()
             supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
+
         }
 
         val text:String = URLEncoder.encode(editText.text.toString(), "UTF-8")
@@ -64,9 +65,6 @@ class MainActivity : AppCompatActivity() {
             response.append(inputLine)
         }
         br.close()
-
-
-
     }
 
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener {
@@ -95,6 +93,7 @@ class MainActivity : AppCompatActivity() {
                     .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
                 return@OnNavigationItemSelectedListener true
             }
+
         }
         false
     }

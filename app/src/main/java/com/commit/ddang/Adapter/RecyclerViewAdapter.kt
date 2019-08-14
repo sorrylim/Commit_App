@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.commit.ddang.Item.Homefeed
 import com.commit.ddang.Item.Item
 import com.commit.ddang.R
-
 import kotlinx.android.synthetic.main.item_view.view.*
 
 class RecyclerViewAdapter(val homefeed: Homefeed) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
