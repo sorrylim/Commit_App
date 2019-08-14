@@ -18,6 +18,9 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
+import android.widget.EditText
+import androidx.recyclerview.widget.RecyclerView
 import com.commit.ddang.Item.Homefeed
 import okhttp3.*
 import com.google.gson.GsonBuilder
@@ -27,12 +30,18 @@ class HomeFragment : Fragment() {
 
     val clientId:String = "zjmsxbzZatZyy90LhgRy"
     val clientSecret:String = "zqU05l2N3LR"
+    lateinit var button_search: Button
+    lateinit var recyclerView: RecyclerView
+    lateinit var edt_01: EditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+        button_search = rootView.findViewById(R.id.button_search)
+        recyclerView = rootView.findViewById(R.id.recyclerView)
+        edt_01 = rootView.findViewById(R.id.edt_01)
         button_search.setOnClickListener({
             if (edt_01.text.isEmpty()) {
                 return@setOnClickListener
@@ -48,45 +57,45 @@ class HomeFragment : Fragment() {
         })
         return rootView
     }
-        fun fetchJson(vararg p0: String) {
-            val text:String = URLEncoder.encode(edt_01.text.toString(), "UTF-8")
-            val apiURL = "https://openapi.naver.com/v1/search/local.json"+ text
+    fun fetchJson(vararg p0: String) {
+        val text:String = URLEncoder.encode(edt_01.text.toString(), "UTF-8")
+        val apiURL = "https://openapi.naver.com/v1/search/local.json?query=$text&display=10&start=1&genre="
 
-            val url = URL(apiURL)
+        val url = URL(apiURL)
 
-            val formBody = FormBody.Builder().add("query", "${text}")
-                .add("display", "10")
-                .add("start", "1")
-                .add("genre", "1")
-                .build()
-            val request = Request.Builder()
-                .url(url)
-                .addHeader("X-Naver-Client-Id", clientId)
-                .addHeader("X-Naver-Client-Secret", clientSecret)
-                .method("GET", null)
-                .build()
+        val formBody = FormBody.Builder().add("query", "${text}")
+            .add("display", "10")
+            .add("start", "1")
+            .add("genre", "1")
+            .build()
+        val request = Request.Builder()
+            .url(url)
+            .addHeader("X-Naver-Client-Id", clientId)
+            .addHeader("X-Naver-Client-Secret", clientSecret)
+            .method("GET", null)
+            .build()
 
-            val client = OkHttpClient()
-            client.newCall(request).enqueue(object: Callback {
-                override fun onResponse(call: Call?, response: Response?) {
-                    val body = response?.body()?.string()
-                    println("Success to execute request : $body")
+        val client = OkHttpClient()
+        client.newCall(request).enqueue(object: Callback {
+            override fun onResponse(call: Call?, response: Response?) {
+                val body = response?.body()?.string()
+                println("Success to execute request : $body")
 
-                    val gson = GsonBuilder().create()
+                val gson = GsonBuilder().create()
 
-                    val homefeed = gson.fromJson(body, Homefeed::class.java)
+                val homefeed = gson.fromJson(body, Homefeed::class.java)
 
 
-                    activity!!.runOnUiThread {
-                        recyclerView.adapter = RecyclerViewAdapter(homefeed)
-                    }
+                activity!!.runOnUiThread {
+                    recyclerView.adapter = RecyclerViewAdapter(homefeed)
                 }
+            }
 
-                override fun onFailure(call: Call?, e: IOException?) {
-                    println("Failed to execute request")
-                }
-            })
-        }
+            override fun onFailure(call: Call?, e: IOException?) {
+                println("Failed to execute request")
+            }
+        })
+    }
 
 
 
