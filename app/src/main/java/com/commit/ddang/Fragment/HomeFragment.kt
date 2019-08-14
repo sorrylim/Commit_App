@@ -29,7 +29,7 @@ import java.io.IOException
 class HomeFragment : Fragment() {
 
     val clientId:String = "zjmsxbzZatZyy90LhgRy"
-    val clientSecret:String = "zqU05l2N3LR"
+    val clientSecret:String = "qU05l2N3LR"
     lateinit var button_search: Button
     lateinit var recyclerView: RecyclerView
     lateinit var edt_01: EditText
