@@ -3,7 +3,7 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="wrap_content">
 
     <ImageView
             android:layout_width="112dp"
@@ -18,13 +18,13 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.215"
-            app:layout_constraintVertical_bias="0.097"/>
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
             android:text="TextView"
-            android:layout_width="46dp"
-            android:layout_height="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/textView_title"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             android:layout_marginStart="8dp"
@@ -33,13 +33,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.187"
-            app:layout_constraintVertical_bias="0.115"/>
+            app:layout_constraintHorizontal_bias="0.216"
+            app:layout_constraintVertical_bias="0.09"/>
 
     <TextView
             android:text="TextView"
-            android:layout_width="140dp"
-            android:layout_height="28dp"
+            android:layout_width="215dp"
+            android:layout_height="68dp"
             android:id="@+id/textView_address"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -48,6 +48,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.432"
-            app:layout_constraintVertical_bias="0.172"/>
+            app:layout_constraintHorizontal_bias="0.865"
+            app:layout_constraintVertical_bias="1.0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

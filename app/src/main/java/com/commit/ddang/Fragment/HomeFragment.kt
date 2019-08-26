@@ -29,7 +29,7 @@ import java.io.IOException
 class HomeFragment : Fragment() {
 
     val clientId:String = "zjmsxbzZatZyy90LhgRy"
-    val clientSecret:String = "qU05l2N3LR"
+    val clientSecret:String = "tUYfairJPI"
     lateinit var button_search: Button
     lateinit var recyclerView: RecyclerView
     lateinit var edt_01: EditText
@@ -58,16 +58,11 @@ class HomeFragment : Fragment() {
         return rootView
     }
     fun fetchJson(vararg p0: String) {
-        val text:String = URLEncoder.encode(edt_01.text.toString(), "UTF-8")
-        val apiURL = "https://openapi.naver.com/v1/search/local.json?query=$text&display=10&start=1&genre="
+        val text:String = URLEncoder.encode(edt_01.text.toString() + " 식당", "UTF-8")
+        val apiURL = "https://openapi.naver.com/v1/search/local.json?query=$text&display=10&start=1"
 
         val url = URL(apiURL)
 
-        val formBody = FormBody.Builder().add("query", "${text}")
-            .add("display", "10")
-            .add("start", "1")
-            .add("genre", "1")
-            .build()
         val request = Request.Builder()
             .url(url)
             .addHeader("X-Naver-Client-Id", clientId)
@@ -87,7 +82,7 @@ class HomeFragment : Fragment() {
 
 
                 activity!!.runOnUiThread {
-                    recyclerView.adapter = RecyclerViewAdapter(homefeed)
+                    recyclerView.adapter = RecyclerViewAdapter(, homefeed)
                 }
             }
 
