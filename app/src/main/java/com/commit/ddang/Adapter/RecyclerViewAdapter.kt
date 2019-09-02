@@ -14,7 +14,7 @@ import com.commit.ddang.Item.Item
 import com.commit.ddang.R
 import kotlinx.android.synthetic.main.item_view.view.*
 
-class RecyclerViewAdapter(val mContext: Context, val homefeed: Homefeed) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+class RecyclerViewAdapter(val homefeed: Homefeed) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return homefeed.items.count()
@@ -23,12 +23,6 @@ class RecyclerViewAdapter(val mContext: Context, val homefeed: Homefeed) : Recyc
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewAdapter.ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_view, parent, false)
-        val holder: ViewHolder = ViewHolder(itemView)
-        holder.itemView.setOnClickListener(View.OnClickListener() {
-            fun onClick(v: View) {
-                val intent: Intent = Intent(, InformActivity::class.java)
-            }
-        })
         return ViewHolder(itemView)
     }
 
@@ -40,7 +34,6 @@ class RecyclerViewAdapter(val mContext: Context, val homefeed: Homefeed) : Recyc
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view){
         fun bindItems(data: Item) {
             itemView.textView_title.text = data.title
-            itemView.textView_address.text = data.address
         }
     }
 }

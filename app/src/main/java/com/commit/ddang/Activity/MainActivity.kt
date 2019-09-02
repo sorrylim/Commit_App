@@ -2,6 +2,7 @@ package com.commit.ddang.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.commit.ddang.Fragment.FavoriteFragment
 import com.commit.ddang.Fragment.HomeFragment
 import com.commit.ddang.Fragment.MapFragment
@@ -22,7 +23,6 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
         }
-
     }
 
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener {

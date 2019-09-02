@@ -2,9 +2,7 @@ package com.commit.ddang.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.commit.ddang.Fragment.FavoriteFragment
-import com.commit.ddang.Fragment.HomeFragment
-import com.commit.ddang.Fragment.MapFragment
+import com.commit.ddang.Fragment.*
 import com.commit.ddang.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -33,7 +31,7 @@ class InformActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.review -> {
-                val fragment = Reviewragment()
+                val fragment = ReviewFragment()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.inform_frame, fragment, fragment.javaClass.simpleName).commit()
                 return@OnNavigationItemSelectedListener true

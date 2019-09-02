@@ -8,3 +8,10 @@ data class Item (
     val telephone:String?,
     val address:String?
 )
+
+data class Recommend (
+    val recommend:String?
+)
+
+
+
