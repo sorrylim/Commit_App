@@ -3,6 +3,7 @@ package com.commit.ddang.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.commit.ddang.Fragment.AccountFragment
 import com.commit.ddang.Fragment.FavoriteFragment
 import com.commit.ddang.Fragment.HomeFragment
 import com.commit.ddang.Fragment.MapFragment
@@ -45,7 +46,12 @@ class MainActivity : AppCompatActivity() {
                     .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
                 return@OnNavigationItemSelectedListener true
             }
-
+            R.id.account -> {
+                val fragment = AccountFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_frame, fragment, fragment.javaClass.simpleName).commit()
+                return@OnNavigationItemSelectedListener true
+            }
         }
         false
     }
