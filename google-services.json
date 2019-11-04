@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "301084772530",
+    "firebase_url": "https://dangginda-app.firebaseio.com",
+    "project_id": "dangginda-app",
+    "storage_bucket": "dangginda-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301084772530:android:4df79abd8a45a150",
+        "android_client_info": {
+          "package_name": "com.commit.ddang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301084772530-1fr1fdii8anuqgcfqun0htga4me2eb1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commit.ddang",
+            "certificate_hash": "d2392b3fcb220aac7b2695795def7a0aacde836e"
+          }
+        },
+        {
+          "client_id": "301084772530-1cqejt4pluie3ffm4ub1u0olpp61coet.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.commit.ddang",
+            "certificate_hash": "a6a538d76b9f5949ec91f04d79cf6a6ce31f853c"
+          }
+        },
+        {
+          "client_id": "301084772530-dcecq3146qtnq25j1tgbllcftcm678dt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1dZnWFliLs3t2zAUibW7c1x5ZIlolHEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301084772530-dcecq3146qtnq25j1tgbllcftcm678dt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

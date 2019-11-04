@@ -73,7 +73,7 @@ class VerticalAdapter(val AItext: ArrayList<Recommend>, activity : Activity) : R
 
                         holder.childrecyclerView.setHasFixedSize(true)
                         holder.childrecyclerView.layoutManager = LinearLayoutManager(mactivity, LinearLayout.HORIZONTAL, false)
-                        holder.childrecyclerView.adapter = RecyclerViewAdapter(homefeed)
+                        holder.childrecyclerView.adapter = RecyclerViewAdapter(mactivity!!, homefeed)
                     }
                 }
 

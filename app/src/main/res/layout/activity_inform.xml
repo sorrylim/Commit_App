@@ -8,84 +8,93 @@
         tools:context=".Activity.InformActivity">
 
     <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="166dp"
-            app:srcCompat="@mipmap/ic_launcher"
-            android:id="@+id/imageView3"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.014"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.225"
+            app:srcCompat="@mipmap/ic_launcher" />
+
 
     <TextView
-            android:text="TextView"
+            android:id="@+id/textView2"
             android:layout_width="86dp"
             android:layout_height="46dp"
-            android:id="@+id/textView2"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:text="TextView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.276"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.446" />
 
     <ImageButton
+            android:id="@+id/imageButton3"
             android:layout_width="33dp"
             android:layout_height="33dp"
-            app:srcCompat="@android:drawable/ic_menu_call"
-            android:id="@+id/imageButton3"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.342"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.337"
-            app:layout_constraintVertical_bias="0.271"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.458"
+            app:srcCompat="@android:drawable/ic_menu_call" />
 
     <ImageButton
+            android:id="@+id/imageButton4"
             android:layout_width="31dp"
             android:layout_height="33dp"
-            app:srcCompat="@android:drawable/ic_menu_share"
-            android:id="@+id/imageButton4"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.456"
-            app:layout_constraintVertical_bias="0.271"/>
-
-
-    <FrameLayout
-            android:id="@+id/inform_frame"
-            android:layout_width="match_parent"
-            android:layout_height="416dp"
-            tools:layout_editor_absoluteY="307dp"
-            tools:layout_editor_absoluteX="8dp">
-
-    </FrameLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.475"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.458"
+            app:srcCompat="@android:drawable/ic_menu_share" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/inform_bnv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/inform_menu_bottom_navigation"
-            tools:layout_editor_absoluteY="251dp"
-            tools:layout_editor_absoluteX="0dp"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.543"
+            app:menu="@menu/inform_menu_bottom_navigation" />
+
+    <FrameLayout
+            android:id="@+id/inform_frame"
+            android:layout_width="394dp"
+            android:layout_height="353dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inform_bnv"
+            app:layout_constraintVertical_bias="1.0">
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
